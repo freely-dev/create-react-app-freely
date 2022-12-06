@@ -1,0 +1,16 @@
+envs:
+  - name: dev
+    jobs:
+    test-dev:
+      name: Test - DEV
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Install node v16
+          uses: actions/setup-node@v1
+          with:
+            node-version: 16
+        - name: Yarn install
+          run: yarn
+  - name: staging
+  - name: prod
